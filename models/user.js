@@ -16,11 +16,7 @@ const User = sequelize.define('User', {
         allowNull: false,
         unique: true
     },
-    firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    lastName: {
+    Name: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -30,6 +26,22 @@ const User = sequelize.define('User', {
     },
     confirmPassword: {
         type: DataTypes.STRING,
+        allowNull: false
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    address: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    area: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    zip: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     role: {
