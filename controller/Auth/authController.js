@@ -34,8 +34,7 @@ const authController = {
 
         hashedPassword = await bcrypt.hash(password, 10);
         const userObj = {
-            firstName,
-            lastName,
+            name,
             email,
             role,
             password: hashedPassword,
