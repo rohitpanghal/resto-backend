@@ -26,7 +26,7 @@ const authController = {
         res.json({ access_token })
     },
     register: async (req, res, next) => {
-        const { firstName, lastName, email, password, confirmPassword, role } = req.body;
+        const { name, email, password, confirmPassword, role, phone, address, area, zip } = req.body;
         let hashedPassword = null;
         if (password !== confirmPassword) {
             return next(CustomErrorHandler.passwordError('Password and Confirm Password should be same !'))
@@ -39,7 +39,11 @@ const authController = {
             email,
             role,
             password: hashedPassword,
-            confirmPassword: hashedPassword
+            confirmPassword: hashedPassword,
+            phone,
+            address,
+            area,
+            zip
         }
         let access_token = null;
         try {
