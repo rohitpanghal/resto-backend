@@ -8,8 +8,16 @@ const MenuItem = sequelize.define('menuItem', {
         defaultValue: DataTypes.UUIDV4, // Or DataTypes.UUIDV1
         primaryKey: true
     },
+    price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
     name: {
         type: DataTypes.STRING,
+        allowNull: false,
+    },
+    imageUrl: {
+        type: DataTypes.TEXT,
         allowNull: false,
     },
 }, {

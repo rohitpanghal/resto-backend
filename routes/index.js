@@ -12,13 +12,13 @@ router.post("/login", authController.login)
 router.get("/categoryByUserId/:id", categoryController.getAllCategoryByUserId)
 router.put("/updateCategoryById", categoryController.updateCategory)
 router.post("/addCategory", categoryController.addCategory)
-router.delete("/deleteCategoryById", categoryController.deleteCategory)
+router.delete("/deleteCategoryById/:id", categoryController.deleteCategory)
 
 //Menu Items Routes
 router.get("/menuItemsByUserId/:id", menuItemController.getAllMenuItemsByUserId)
 router.put("/updateMenuItemsById", menuItemController.updateMenuItem)
 router.post("/addMenuItems", menuItemController.addMenuItem)
-router.delete("/deleteMenuItemsById", menuItemController.deleteMenuItem)
+router.delete("/deleteMenuItemsById/:id", menuItemController.deleteMenuItem)
 
 
 module.exports = router

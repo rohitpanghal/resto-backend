@@ -39,9 +39,9 @@ const menuItemController = {
         }
     },
     deleteMenuItem: async (req, res, next) => {
-        const { menuItemId } = req.body;
+        const id = req.params.id;
         try {
-            let response = await MenuItem.destroy({ where: { menuItemId: menuItemId } });
+            let response = await MenuItem.destroy({ where: { menuItemId: id } });
             res.json(response)
         } catch (err) {
             return next(err)

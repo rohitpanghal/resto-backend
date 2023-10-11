@@ -22,7 +22,7 @@ const doc = {
             'email': 'rajputankit22@gmail.com'
         },
     },
-    host: 'localhost:5000',      // by default: 'localhost:3000'
+    host: 'localhost:4444',      // by default: 'localhost:3000'
     basePath: '/',  // by default: '/'
     schemes: ['http'],   // by default: ['http']
     consumes: ['application/json'],  // by default: ['application/json']
