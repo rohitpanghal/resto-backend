@@ -27,10 +27,10 @@ const menuItemController = {
         }
     },
     addMenuItem: async (req, res, next) => {
-        const { name, userId, categoryId } = req.body;
+        const { name, userId, categoryId,price,imageUrl } = req.body;
         try {
             let obj = {
-                name: name, userId: userId, categoryId: categoryId
+                name: name, userId: userId, categoryId: categoryId,price:price,imageUrl:imageUrl
             }
             let response = await MenuItem.create(obj);
             res.json(response)
