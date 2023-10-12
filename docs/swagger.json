@@ -9,7 +9,7 @@
       "email": "rajputankit22@gmail.com"
     }
   },
-  "host": "localhost:5000",
+  "host": "localhost:4444",
   "basePath": "/",
   "schemes": [
     "http"
@@ -182,21 +182,15 @@
         }
       }
     },
-    "/api/deleteCategoryById": {
+    "/api/deleteCategoryById/{id}": {
       "delete": {
         "description": "",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "categoryId": {
-                  "example": "any"
-                }
-              }
-            }
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -275,6 +269,12 @@
                 },
                 "categoryId": {
                   "example": "any"
+                },
+                "imageUrl": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
                 }
               }
             }
@@ -287,21 +287,15 @@
         }
       }
     },
-    "/api/deleteMenuItemsById": {
+    "/api/deleteMenuItemsById/{id}": {
       "delete": {
         "description": "",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "menuItemId": {
-                  "example": "any"
-                }
-              }
-            }
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
