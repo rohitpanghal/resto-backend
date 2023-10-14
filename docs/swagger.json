@@ -9,7 +9,7 @@
       "email": "rajputankit22@gmail.com"
     }
   },
-  "host": "localhost:4444",
+  "host": "localhost:5998",
   "basePath": "/",
   "schemes": [
     "http"
@@ -270,10 +270,10 @@
                 "categoryId": {
                   "example": "any"
                 },
-                "imageUrl": {
+                "price": {
                   "example": "any"
                 },
-                "price": {
+                "imageUrl": {
                   "example": "any"
                 }
               }

@@ -32,7 +32,9 @@ const menuItemController = {
             let obj = {
                 name: name, userId: userId, categoryId: categoryId,price:price,imageUrl:imageUrl
             }
-            let response = await MenuItem.create(obj);
+            console.log(obj);
+            let response = await MenuItem.create(req.body);
+            console.log("🚀 ~ file: mentItmeController.js:37 ~ addMenuItem: ~ response:", response)
             res.json(response)
         } catch (err) {
             return next(err)
