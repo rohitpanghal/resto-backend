@@ -25,5 +25,4 @@ router.put("/updateMenuItemsById", auth,menuItemController.updateMenuItem)
 router.post("/addMenuItems", auth,menuItemController.addMenuItem)
 router.delete("/deleteMenuItemsById/:id", auth,menuItemController.deleteMenuItem)
 
-
 module.exports = router
