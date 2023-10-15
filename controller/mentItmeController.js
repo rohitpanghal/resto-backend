@@ -1,5 +1,5 @@
 const MenuItem = require("../models/menuItem");
-
+const Category = require("../models/category")
 
 
 const menuItemController = {
@@ -7,7 +7,7 @@ const menuItemController = {
         const id = req.params.id;
 
         try {
-            let resposne = await MenuItem.findAll({ where: { userId: id } })
+            let resposne = await MenuItem.findAll({ where: { userId: id },include:{Category} })
             res.json(resposne)
         } catch (err) {
             return next(err)
