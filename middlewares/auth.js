@@ -13,7 +13,6 @@ const auth= async (req,res,next)=>{
             userId,
             role
         }
-     
         req.user=obj
         next()
     }

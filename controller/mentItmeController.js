@@ -5,9 +5,8 @@ const Category = require("../models/category")
 const menuItemController = {
     getAllMenuItemsByUserId: async (req, res, next) => {
         const id = req.params.id;
-
         try {
-            let resposne = await MenuItem.findAll({ where: { userId: id },include:{Category} })
+            let resposne = await MenuItem.findAll({ where: { userId: id }})
             res.json(resposne)
         } catch (err) {
             return next(err)
