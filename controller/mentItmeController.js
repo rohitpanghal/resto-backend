@@ -6,7 +6,7 @@ const menuItemController = {
     getAllMenuItemsByUserId: async (req, res, next) => {
         const id = req.params.id;
         try {
-            let resposne = await MenuItem.findAll({ where: { userId: id }})
+            let resposne = await MenuItem.findAll({ where: { userId: id },include:{model:Category}})
             res.json(resposne)
         } catch (err) {
             return next(err)
