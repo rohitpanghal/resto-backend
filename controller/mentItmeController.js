@@ -17,7 +17,7 @@ const menuItemController = {
         const { categoryId, name, userId, menuItemId } = req.body;
         try {
             let obj = {
-                name: name, userId: userId, categoryId: categoryId
+                name: name, userId: userId, categoryId: categoryId,menuItemId:menuItemId
             }
             let response = await MenuItem.update(obj, { where: { menuItemId: menuItemId } });
             res.json(response)
@@ -33,7 +33,6 @@ const menuItemController = {
             }
             console.log(obj);
             let response = await MenuItem.create(req.body);
-            console.log("🚀 ~ file: mentItmeController.js:37 ~ addMenuItem: ~ response:", response)
             res.json(response)
         } catch (err) {
             return next(err)
